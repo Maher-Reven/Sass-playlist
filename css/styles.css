@@ -1,3 +1,28 @@
+body {
+  font-family: arial;
+  background: #f8f9fb; }
+
+html, body, ul, ol, li, form, fieldset, legend {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0; }
+
+fieldset, img {
+  border: 0; }
+
+li {
+  list-style: none; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 #main-nav {
   background-color: #032f3e; }
   #main-nav ul {
@@ -13,13 +38,18 @@
     -ms-flex-pack: justify;
     justify-content: space-between; }
   #main-nav li {
-    width: 14%; }
+    width: calc(100% / 6); }
+    @media screen and (max-width: 600px) {
+      #main-nav li {
+        width: 100%; } }
   #main-nav a {
     color: #f8f9fb;
     text-decoration: none;
     padding: 16px;
     display: block;
     text-align: center; }
+    #main-nav a:hover {
+      background: #04455b; }
 
 section h1 {
   font-size: 24px;
@@ -32,7 +62,7 @@ section h1 {
   text-align: right; }
   .lead-banner .banner-content {
     position: absolute;
-    top: 50;
+    top: 50px;
     width: 100%; }
   .lead-banner img {
     width: 100%; }
@@ -41,6 +71,9 @@ section h1 {
     display: block;
     text-transform: uppercase;
     font-weight: bold; }
+    @media screen and (max-width: 3000px) and (min-width: 1200px) {
+      .lead-banner span {
+        font-size: 68px; } }
   .lead-banner span.title {
     font-weight: normal;
     margin-bottom: 30px; }
@@ -51,7 +84,7 @@ section h1 {
   color: white; }
   .lessons-banner .banner-content {
     position: absolute;
-    top: 50;
+    top: 50px;
     width: 100%; }
   .lessons-banner img {
     width: 100%; }
@@ -60,6 +93,9 @@ section h1 {
     display: block;
     text-transform: uppercase;
     font-weight: bold; }
+    @media screen and (max-width: 3000px) and (min-width: 1200px) {
+      .lessons-banner span {
+        font-size: 68px; } }
   .lessons-banner span.title {
     font-weight: normal;
     margin-bottom: 30px; }
@@ -68,3 +104,41 @@ section h1 {
     font-size: 20px;
     max-width: 500px;
     margin: 60px 0; }
+
+#services {
+  margin-bottom: 60px; }
+  #services li {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    width: 33.33333%; }
+  #services img {
+    width: 60%;
+    margin: 20px 20%; }
+  #services a {
+    text-decoration: none;
+    color: #032f3e;
+    font-weight: bold; }
+    #services a:hover {
+      color: #3e1203; }
+  #services ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+
+#projects li {
+  float: left;
+  margin-right: 8%;
+  margin-bottom: 8%;
+  width: 46%; }
+  #projects li:nth-child(2n) {
+    margin-right: 0; }
+  #projects li img {
+    width: 100%; }
